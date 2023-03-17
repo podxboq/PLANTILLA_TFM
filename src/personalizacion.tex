@@ -1,7 +1,3 @@
-\DeclareMathOperator{\tr}{Tr}
-\DeclareMathOperator{\diag}{Diag}
-\newcommand{\matr}[1]{\mathbf{#1}}
-\providecommand{\tq}{\mid}
 \providecommand{\N}{\mathbb{N}}
 \providecommand{\Z}{\mathbb{Z}}
 \providecommand{\Q}{\mathbb{Q}}
@@ -16,40 +12,15 @@
 \providecommand{\bra}[1]{\left\langle#1\right\rvert}
 \providecommand{\ket}[1]{\left\lvert#1\right\rangle}
 \providecommand{\ketbra}[2]{\left\lvert#1\right\rangle\!\left\langle#2\right\rvert}
-\providecommand{\so}{\Rightarrow}
-\providecommand{\by}[1]{\overset{\fbox{\tiny #1}}{=}}
-\providecommand{\byref}[1]{\overset{\fbox{\tiny\ref{#1}}}{=}}
-\providecommand{\maps}[3]{#1:#2\longrightarrow #3}
-\providecommand{\coma}{,\thinspace}
-\providecommand{\pari}[2]{(#1,\thinspace #2)}
-\providecommand{\indexdots}[3]{#1=#2,\ldots,#3}
-\providecommand{\define}[2]{\textbf{#1}\label{def:#2}}
 \providecommand{\avg}[1]{\left\langle#1\right\rangle}
 \providecommand{\abs}[1]{\lvert#1\rvert}
 \providecommand{\nor}[1]{\lVert#1\rVert}
 \providecommand{\operatoravg}[3]{\left\langle#1|#2|#3\right\rangle}
-\providecommand{\cinfinity}[1]{\mathscr{C}^\infty(#1)}
-\providecommand{\glossarydef}[3]{\newglossaryentry{#1}{name={#2},description={#3}}\gls{#1}}
-\providecommand{\vec}[1]{\overrightarrow{#1}}
-\newcommand{\set}[1]{\left\{#1\right\}}
-\newcommand{\where}{\mathrel{}\middle|\mathrel{}}
-\newcommand{\amplitud}{\mathrm{A}}
-\newcommand{\longonda}{\lambda}
-\newcommand{\frecuencia}{\nu}
-\newcommand{\fase}{\alpha}
-\newcommand{\frecuenciaangular}{\omega}
-\newcommand{\longondaangular}{\mathrm{K}}
-\newcommand{\periodo}{\mathrm{T}}
-\newcommand{\energia}{\mathrm{E}}
-\newcommand{\fuconda}{\Psi}
-\newcommand{\lagrangiano}{\mathcal{L}}
-\newcommand{\parcial}[2]{\frac{\partial #1}{\partial #2}}
-\newcommand{\parciall}[3]{\frac{\partial^2 #1}{\partial #2 \partial #3}}
-\newcommand{\parciald}[2]{\frac{\partial^2 #1}{\partial #2^2}}
-\newcommand{\eqS}[1]{i\hbar\frac{\partial #1}{\partial t}=\frac{-\hbar^2}{2m}\nabla^2 #1+V(r,t)#1}
-\newcommand{\eqSx}[1]{i\hbar\frac{\partial #1}{\partial t}=\frac{-\hbar^2}{2m}\frac{\partial^2 #1}{\partial x^2}+V(x, t)#1}
-\newcommand{\intall}{\int_{-\infty}^{+\infty}}
-\newcommand{\ndots}[3]{#1 = #2, \dots, #3}
+\providecommand{\set}[1]{\left\{#1\right\}}
+\providecommand{\so}{\Rightarrow}
+\providecommand{\tq}{\mid}
+\providecommand{\where}{\mathrel{}\middle|\mathrel{}}
+
 \definecolor{unir-azul-flojo}{RGB}{230,244,249}
 \definecolor{unir-azul-fuerte}{RGB}{0,152,205}
 %Kets notables
@@ -63,19 +34,9 @@
 \newcommand{\ketBellCuatro}{\frac{1}{\sqrt{2}}(\ket{10}-\ket{01})}
 
 %OPERADORES 2x2
-\newcommand{\matrixX}{\begin{pmatrix}
-	                      0 & 1 \\ 1 & 0
-\end{pmatrix}}
-\newcommand{\matrixY}{\begin{pmatrix}
-	                      0 & -i \\ i & 0
-\end{pmatrix}}
-\newcommand{\matrixZ}{\begin{pmatrix}
-	                      1 & 0 \\ 0 & -1
-\end{pmatrix}}
-\newcommand{\matrixH}{\frac{1}{\sqrt {2}}  \begin{pmatrix}
-	                                           1 & 1 \\ 1 & -1
-\end{pmatrix}}
-%OPERADORES $4x4
-\newcommand{\matrixCNOT}{\begin{pmatrix}
-	                         1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0
-\end{pmatrix}}
+\newcommand{\matrixX}{\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}}
+\newcommand{\matrixY}{\begin{pmatrix}0 & -i \\ i & 0\end{pmatrix}}
+\newcommand{\matrixZ}{\begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}}
+\newcommand{\matrixH}{\frac{1}{\sqrt {2}}  \begin{pmatrix}1 & 1 \\ 1 & -1\end{pmatrix}}
+%OPERADORES 4x4
+\newcommand{\matrixCNOT}{\begin{pmatrix}1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0\end{pmatrix}}

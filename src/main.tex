@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt,spanish]{book}
 
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -17,6 +17,7 @@
 \renewcommand{\listfigurename}{\textcolor{unir-azul-fuerte}{Índice de figuras}}
 \renewcommand{\listtablename}{\textcolor{unir-azul-fuerte}{Índice de tablas}}
 \begin{document}
+	\frontmatter
 	\personalheader{Nombre y apellidos del estudiante}{Título del Trabajo Fin de Estudios}
 	\include{portada}
 	\include{resumen}
@@ -24,12 +25,13 @@
 	\include{indice}
 	\include{figuras}
 	\include{tablas}
-
+	\mainmatter
 	\include{introduccion}
 	\include{contexto}
 	\include{requisitos}
 	\include{evaluacion}
 	\include{conclusiones}
 	\include{referencias}
+	\backmatter
 	\include{anexos}
 \end{document}
