@@ -1,18 +1,10 @@
-%
-%Comandos y paquetes que se introducen
-%
-%
-%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{unir}
 %
 %---paquetes---------------------
 %
-%idioma i codificación
-\usepackage{babel}
-\usepackage[utf8]{inputenc} %descomentar esta línea si se trabaja en linux
-%\usepackage[latin1]{inputenc} %comentar esta línea si se trabaja en linux
-
+%idioma y codificación
+\usepackage[spanish]{babel}
 
 %simbolos
 \usepackage{amsmath}
@@ -32,33 +24,31 @@
 %colores en tablas
 \usepackage{colortbl}
 
+%bibliografía
+\usepackage[hyphens]{url}
+\usepackage[authoryear,round]{natbib}
+
 %cabeceras y pies de página
 \usepackage{vmargin}
 \usepackage{fancyhdr}
+\usepackage{sectsty}
 \pagestyle{fancy}
 \fancyhfoffset{20pt}
 \renewcommand{\headrulewidth}{0.0pt}
 \setlength{\headheight}{14pt}%
-
 \renewcommand{\maketitle}{\creaportada}
-
 \renewcommand{\baselinestretch}{1.5}
-
-
 
 \usepackage{etoolbox}
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{\if@openright\clearpage\else\clearpage\fi}{}{}
 
-
-
 %hiper-referencias
 \usepackage{hyperref}
 
-
-%
-%
 %
 \definecolor{azulunir}{rgb}{0,0.59,0.80}
+\definecolor{unir-azul-flojo}{RGB}{230,244,249}
+\definecolor{unir-azul-fuerte}{RGB}{0,152,205}
 
 \newcommand\director[1]{\def\@director{#1}}
 \newcommand\nombreciudad[1]{\def\@nombreciudad{#1}}
@@ -74,45 +64,10 @@
 \newtheorem{coro}{Corolario}
 \newtheorem{lema}{Lema}
 \newtheorem{defi}{Definición}
-%aquests entorns no estan en italica
+%estos entornos no están en itálica
 \theoremstyle{definition}
 \newtheorem{obs}{Observación}
 \newtheorem{ex}{Ejemplo}
-
-%
-%shortcuts
-%
-%lletres dobles
-\newcommand{\RR}{\mathbb{R}}
-\newcommand{\T}{\mathbb{T}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\F}{\mathbb{F}}
-%cals
-\newcommand{\CC}{\mathcal{C}}
-%gregues
-\newcommand{\al}{\alpha}
-\newcommand{\g}{\gamma}
-\renewcommand{\d}{\delta}
-\newcommand{\s}{\sigma}
-\newcommand{\la}{\lambda}
-\newcommand{\e}{\varepsilon}
-\newcommand{\om}{\omega}
-\newcommand{\vp}{\varphi}
-%derivada parcial
-\newcommand{\p}{\partial}
-%dispstyle
-\newcommand{\ds}{\displaystyle}
-%mathrm's
-\newcommand{\rank}{\mathrm{rank}}
-\newcommand{\Id}{\mathrm{Id}}
-\newcommand{\diag}{\mathrm{diag}}
-
-
-
-
-
 
 \newcommand{\creaportada}{\begingroup
 \thispagestyle{empty}
@@ -137,15 +92,11 @@
 }
 \vspace{3cm}
 
-{\color{azulunir}{Ciudad:}}\@nombreciudad\\
+{\color{azulunir}{Ciudad:}} \@nombreciudad\\
 {\color{azulunir}{Fecha:}} \thedate
 \newpage
 \thispagestyle{empty}
 \endgroup}
-
-
-
-
 
 %---------------------------
 %cabecera del trabajo
@@ -156,3 +107,17 @@
 \rfoot{\thepage}
 \cfoot[]{}
 \chead[]{}
+
+\renewcommand{\labelitemi}{$\textcolor{unir-azul-fuerte}{\bullet}$}
+\renewcommand{\labelitemii}{$\textcolor{unir-azul-fuerte}{\cdot}$}
+\renewcommand{\labelitemiii}{$\textcolor{unir-azul-fuerte}{\diamond}$}
+\renewcommand{\labelitemiv}{$\textcolor{unir-azul-fuerte}{\ast}$}
+\titleformat{\chapter}[hang]{\vspace{-4cm}\huge\bfseries\color{unir-azul-fuerte}}{\thechapter. }{0pt}{\Huge\bfseries}
+\chapterfont{\color{unir-azul-fuerte}}
+\sectionfont{\color{unir-azul-fuerte}}
+\subsectionfont{\color{unir-azul-fuerte}}
+\renewcommand{\listfigurename}{Índice de Ilustraciones}
+\renewcommand{\listtablename}{Índice de Tablas}
+\renewcommand{\contentsname}{Índice de Contenidos}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla}
