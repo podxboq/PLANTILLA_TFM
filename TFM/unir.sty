@@ -43,7 +43,8 @@
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{\if@openright\clearpage\else\clearpage\fi}{}{}
 
 %hiper-referencias
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nottoc]{tocbibind}
 
 %
 \definecolor{azulunir}{rgb}{0,0.59,0.80}
@@ -86,7 +87,7 @@
 
 \noindent
 \flushleft{
-{\bf Trabajo Fin de Estudios}\\  \vspace{0.3cm}
+{\bf Trabajo Fin de Máster}\\  \vspace{0.3cm}
 {\bf presentado por:} \theauthor\\  \vspace{0.3cm}
 {\bf Dirigido por:} \@director %\thedirector
 }
@@ -116,8 +117,8 @@
 \chapterfont{\color{unir-azul-fuerte}}
 \sectionfont{\color{unir-azul-fuerte}}
 \subsectionfont{\color{unir-azul-fuerte}}
-\renewcommand{\listfigurename}{Índice de Ilustraciones}
-\renewcommand{\listtablename}{Índice de Tablas}
-\renewcommand{\contentsname}{Índice de Contenidos}
+\renewcommand{\listfigurename}{Índice de figuras}
+\renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\contentsname}{Índice de contenidos}
 \renewcommand{\figurename}{Figura}
 \renewcommand{\tablename}{Tabla}
